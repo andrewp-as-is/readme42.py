@@ -1,0 +1,15 @@
+{
+  "name": "readme42",
+  "version": "2020.5.30",
+  "description": "requires42.com cli",
+  "keywords": [
+    "requires42",
+    "requires",
+    "requirements"
+  ],
+  "homepage": "https://github.com/andrewp-as-is/readme42.py",
+  "license": "Unlicense",
+  "bin": {
+    "readme42": "./scripts/readme42"
+  }
+}
