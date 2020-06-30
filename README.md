@@ -1,27 +1,22 @@
 <!--
-https://pypi.org/project/readme-generator/
-https://pypi.org/project/python-readme-generator/
+https://readme42.com
 -->
 
-[![](https://img.shields.io/badge/OS-Unix-blue.svg?longCache=True)]()
-[![](https://img.shields.io/badge/language-Python-blue.svg?longCache=True)]()
-[![](https://img.shields.io/pypi/v/readme42.svg?maxAge=3600)](https://pypi.org/project/readme42/)
-[![](https://img.shields.io/npm/v/readme42.svg?maxAge=3600)](https://www.npmjs.com/package/readme42)
-[![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
-[![Travis](https://api.travis-ci.org/andrewp-as-is/readme42.py.svg?branch=master)](https://travis-ci.org/andrewp-as-is/readme42.py/)
 
-#### Installation
-```bash
-$ [sudo] npm i -g readme42
-```
+
+[![](https://img.shields.io/badge/OS-Unix-blue.svg?longCache=True)]()
+[![](https://img.shields.io/pypi/v/readme42.svg?maxAge=3600)](https://pypi.org/project/readme42/)
+[![](https://img.shields.io/npm/v/readme42.svg?maxAge=3600)](https://www.npmjs.com/package/readme42)[![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
+[![](https://github.com/andrewp-as-is/readme42.py/workflows/tests42/badge.svg)](https://github.com/andrewp-as-is/readme42.py/actions)
+
+### Installation
 ```bash
 $ [sudo] pip install readme42
 ```
 
-#### Scripts usage
-command|`usage`
--|-
-`readme42` |`usage: readme42 path`
+```bash
+$ [sudo] npm i -g readme42
+```
 
 #### Examples
 https://readme42.com/templates/username/template
@@ -62,5 +57,5 @@ open('README.md','w').write(r.text)
 +   [readme42.com](https://readme42.com/)
 
 <p align="center">
-    <a href="https://pypi.org/project/python-readme-generator/">python-readme-generator</a>
+    <a href="https://readme42.com/">readme42.com</a>
 </p>
