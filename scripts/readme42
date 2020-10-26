@@ -20,7 +20,7 @@ export README42_TOKEN=SECRET # https://readme42.com/token" 1>&2 && exit 1
 export README42_TEMPLATE=username/template" 1>&2 && exit 1
 
 cd "$1" || exit
-set -- curl --fail -s -X POST -H "Authorization: Token $README42_TOKEN"
+set -- curl --show-error -w '\n%{http_code}' --connect-timeout 5 --max-time 10 -s -X POST -H "Authorization: Token $README42_TOKEN"
 
 md_files="$(find . -type f -name '*.md' -maxdepth 3)" || exit
 [[ -n "$md_files" ]] && while IFS= read f; do
@@ -36,4 +36,13 @@ done <<< "$vars"
 
 set -- "$@" https://api.readme42.com/templates/"$README42_TEMPLATE"
 
-"$@"
+out="$("$@" 2>&1)"
+http_code="$(echo "$out" | tail -n1)"
+
+if [[ $http_code != 200 ]]; then
+    echo "$out" | sed '$d' 1>&2
+    exit 22
+else
+    echo "$out" | sed '$d'
+    exit 0
+fi
